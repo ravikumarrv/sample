@@ -1,2 +1,4 @@
-FROM ubuntu
-RUN echo "Hello World"
+FROM ubuntu:18.04
+COPY . /app
+RUN make /app
+CMD python /app/app.py
